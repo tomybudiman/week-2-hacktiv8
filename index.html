@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta type="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <title>Story Time</title>
+</head>
+<body>
+<section class="welcome" id="welcome">
+    <div class="wrap">
+        <span class="title">Story Time</span>
+        <span class="desc">"Story Telling in Different Way"</span>
+        <button id="begin">Start Now</button>
+    </div>
+</section>
+<section class="form" id="form">
+    <header class="header">
+        <div class="image"></div>
+        <span>Storyline Editor</span>
+    </header>
+    <div class="form">
+        <input title="Masukan nama" placeholder="Masukan Judul Cerita Kamu" id="your-title"/>
+        <textarea title="Cerita Kamu" id="your-story"></textarea>
+        <span>*Pisahkan antar paragraf dengan 1 baris kosong.</span>
+        <button id="publish">Publish</button>
+    </div>
+    <footer>Copyright &copy; 2017 - Tomy Djaya Budiman</footer>
+</section>
+<section class="result" id="result">
+    <div class="container" id="result-container">
+        <div class="title" id="story-title">Default</div>
+        <ul class="content" id="story-content"></ul>
+    </div>
+    <button class="nav-story prev" id="nav-story-prev">
+        <img src="assets/media/arrow-left.png"/>
+    </button>
+    <button class="nav-story next" id="nav-story-next">
+        <img src="assets/media/arrow-right.png"/>
+    </button>
+</section>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="assets/js/index.js"></script>
+</body>
+</html>
