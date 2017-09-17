@@ -14,16 +14,16 @@ $(document).ready(function(){
     });
 
     //==> Input Story
-    var story={};
+    var story={}; // Create Empty JS Object
     var inputTitle=$("#your-title");
     var inputStory=$("#your-story");
     var lastStoryId;
     $("#publish").on("click",function(){
         // If Name & Story is not Empty
         if(inputTitle.val().length !== 0 && inputStory.val().length !== 0){
-            var storyContent=inputStory.val().replace(/\n/g,"&").split("&&");
-            story["storyTitle"]=inputTitle.val();
-            story["storyContent"]=storyContent;
+            var storyContent=inputStory.val().replace(/\n/g,"&").split("&&"); // Split string into array
+            story["storyTitle"]=inputTitle.val(); // Inject string into JS object
+            story["storyContent"]=storyContent; // Inject array into JS object
             lastStoryId=story.storyContent.length;
             // Hide Input Story Page
             $("#form").animate({
