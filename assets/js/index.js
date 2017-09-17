@@ -67,7 +67,7 @@ $(document).ready(function(){
             $("#story-content").append(createList);
         }
     }
-    //==> Navigate Story
+    //==> Story Navigation
     // Previous Slide
     $("#nav-story-prev").on("click",function(){
         var storyActive=$(".story-active");
