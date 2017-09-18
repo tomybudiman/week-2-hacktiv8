@@ -1,4 +1,17 @@
+/*
+// Pseudocode //
+* READ and SAVE "story-title"
+* READ and SAVE "story-content"
+* IF "story-title" and "story-content" value is empty THEN
+*   DO READ and SAVE "story-title"
+*   DO READ and SAVE "story-content"
+* ELSE
+*   SAVE "story-array" with VALUE "story-content" SPLIT into array
+*   SHOW "story-title"
+*   SHOW EACH of "story-array"
+*/
 $(document).ready(function(){
+    console.log("Pseudocode ada di dalam file JS (Comment)");
     //==> Welcome Screen
     $("#begin").on("click",function(){
         // Hide Welcome Screen
@@ -15,8 +28,8 @@ $(document).ready(function(){
 
     //==> Input Story
     var story={}; // Create Empty JS Object
-    var inputTitle=$("#your-title");
-    var inputStory=$("#your-story");
+    var inputTitle=$("#your-title"); // Get value from input
+    var inputStory=$("#your-story"); // Get value from input
     var lastStoryId;
     $("#publish").on("click",function(){
         // If Name & Story is not Empty
@@ -53,17 +66,18 @@ $(document).ready(function(){
     function createStoryline(){
         $("#story-title").html(story.storyTitle);
         for(var i=0;i < story.storyContent.length;i++){
+            // Create Element
             var createList=document.createElement("LI");
             var createSpan=document.createElement("SPAN");
             var eachParagraph=document.createTextNode(story.storyContent[i]);
-            /* ----- */
+            // Reconstruct Element
             createSpan.appendChild(eachParagraph);
             createList.appendChild(createSpan);
             createList.setAttribute("story-id",i);
             if(i === 0){
                 createList.className="story-active";
             }
-            /* ----- */
+            // Append Element to HTML Body
             $("#story-content").append(createList);
         }
     }
